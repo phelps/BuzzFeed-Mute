@@ -1,0 +1,23 @@
+{
+	"manifest_version": 2,
+
+	"name": "BuzzFeed Mute",
+	
+	"version": "0.1",
+
+	"permissions": [
+		"http://*.buzzfeed.com/*"
+	],
+	"content_scripts": [
+		{
+			"matches": [
+				"http://*.buzzfeed.com/*"
+			],
+			"js": [
+				"zepto.min.js",
+				"buzzFeedMute.js"
+			],
+			"run_at": "document_end"
+		}
+	]
+}
